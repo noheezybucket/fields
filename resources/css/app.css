@@ -14,7 +14,7 @@
 
 input,
 select {
-    @apply border border-orange-200 rounded-md py-3 px-2 w-full outline-none;
+    @apply border border-primary rounded-md py-3 px-2 w-full outline-none;
 }
 
 form {
