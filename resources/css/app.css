@@ -22,15 +22,15 @@ form {
 }
 
 .btn-primary {
-    @apply bg-orange-600 text-white w-full py-3 rounded-md border border-orange-600 hover:bg-transparent hover:text-orange-600 duration-75;
+    @apply bg-primary text-white w-full py-3 rounded-md border border-primary hover:bg-transparent hover:text-primary duration-75;
 }
 
 .btn-update {
-    @apply bg-orange-600 text-white w-full py-2 rounded-md border border-orange-600 hover:bg-transparent hover:text-orange-600 duration-75 inline-block text-center;
+    @apply bg-primary text-white w-full py-2 rounded-md border border-primary hover:bg-transparent hover:text-primary duration-75 inline-block text-center;
 }
 
 .btn-delete {
-    @apply hover:bg-orange-600 hover:text-white w-full py-2 rounded-md border border-orange-600  text-orange-600 duration-75 inline-block text-center;
+    @apply hover:bg-primary hover:text-white w-full py-2 rounded-md border border-primary  text-primary duration-75 inline-block text-center;
 }
 
 .error {

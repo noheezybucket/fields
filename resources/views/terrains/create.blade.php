@@ -8,7 +8,7 @@
         <div class="flex justify-between">
 
             <h1 class="font-bold text-3xl">Création d'un terrain</h1>
-            <a href="{{ route('home') }}" class="bg-orange-600 flex items-center px-4 rounded-md text-white">
+            <a href="{{ route('home') }}" class="bg-primary flex items-center px-4 rounded-md text-white">
                 <span>
                     Retour
                 </span>

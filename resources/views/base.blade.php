@@ -12,7 +12,7 @@
 <body>
 
     <header
-        class="flex gap-4 justify-between items-center centered-margin py-5 border mt-2 rounded-md px-2 bg-orange-600 text-white">
+        class="flex gap-4 justify-between items-center centered-margin py-5 border mt-2 rounded-md px-2 bg-primary text-white">
         <div class="flex items-center">
             <svg class="w-10 h-10 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                 width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -24,13 +24,12 @@
         <nav>
             <ul class="list-none flex gap-2 items-center font-bold">
                 <li>
-                    <a href="{{ route('home') }}">
+                    <a href="{{ route('home') }}" class="bg-white text-primary p-2 rounded-md">
                         accueil
                     </a>
                 </li>
-                <li>|</li>
                 <li>
-                    <a href="{{ route('create-terrain') }}">
+                    <a href="{{ route('create-terrain') }}" class=" text-white p-2 rounded-md">
                         ajouter un terrain
                     </a>
                 </li>
@@ -40,6 +39,7 @@
     <main class="centered-margin">
         @yield('content')
     </main>
+
 </body>
 
 </html>

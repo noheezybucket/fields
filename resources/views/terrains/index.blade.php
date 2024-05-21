@@ -5,13 +5,13 @@
     <div class="space-y-5 pt-5">
         <div class="flex justify-between">
 
-            <h1 class="font-bold text-3xl">Terrains disponibles</h1>
-            <a href="{{ route('create-terrain') }}"
-                class="border border-orange-600 flex items-center px-4 rounded-md text-orange-500 ">
+            <h1 class="font-bold text-3xl text-primary uppercase">Terrains disponibles</h1>
+            {{-- <a href="{{ route('create-terrain') }}"
+                class="border border-primary flex items-center px-4 rounded-md text-primary ">
                 <span>
                     Ajouter un terrain
                 </span>
-            </a>
+            </a> --}}
         </div>
         @if (session('status'))
             <div class="success">{{ session('status') }}</div>
@@ -24,13 +24,13 @@
             @foreach ($terrains as $terrain)
                 <div class="border rounded-md">
                     <div class="relative">
-                        <div class="absolute bg-orange-600 top-0 left-0 h-full w-full bg-opacity-40"></div>
+                        <div class="absolute bg-primary top-0 left-0 h-full w-full bg-opacity-40"></div>
                         <img src="{{ asset('assets/default.jpg') }}" alt="">
                     </div>
                     <div class="p-2 space-y-3">
 
                         <div class="flex items-center gap-2">
-                            <span class="bg-orange-600 rounded-full p-1">
+                            <span class="bg-primary rounded-full p-1">
 
                                 <svg class="w-6 h-6 text-white dark:text-white" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
@@ -43,7 +43,7 @@
                             {{ ucfirst($terrain->type_de_papier) }}
                         </div>
                         <div class="flex items-center gap-2">
-                            <span class="bg-orange-600 rounded-full p-1">
+                            <span class="bg-primary rounded-full p-1">
 
                                 <svg class="w-6 h-6 text-white dark:text-white" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
@@ -58,7 +58,7 @@
 
                         </div>
                         <div class="flex items-center gap-2">
-                            <span class="bg-orange-600 rounded-full p-1">
+                            <span class="bg-primary rounded-full p-1">
 
                                 <svg class="w-6 h-6 text-white dark:text-white" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
@@ -80,7 +80,24 @@
                 </div>
             @endforeach
         </div>
+        <div>
+            {{ $terrains->links() }}
+
+        </div>
 
     </div>
+    <footer class="bg-primary py-10 my-5 rounded-md">
+        <div class="centered-margin text-white">
 
+            <div class="flex items-center justify-center">
+                <svg class="w-10 h-10 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M6 4h12M6 4v16M6 4H5m13 0v16m0-16h1m-1 16H6m12 0h1M6 20H5M9 7h1v1H9V7Zm5 0h1v1h-1V7Zm-5 4h1v1H9v-1Zm5 0h1v1h-1v-1Zm-3 4h2a1 1 0 0 1 1 1v4h-4v-4a1 1 0 0 1 1-1Z" />
+                </svg>
+                <h1 class="text-2xl font-bold">FIELDS</h1>
+            </div>
+            <p class="text-center">contact@fields.com</p>
+        </div>
+    </footer>
 @endsection

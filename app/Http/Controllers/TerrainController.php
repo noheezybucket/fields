@@ -9,7 +9,7 @@ class TerrainController extends Controller
 {
     public function index()
     {
-        $terrains = Terrain::all();
+        $terrains = Terrain::paginate(6);
 
         return view('terrains.index', compact('terrains'));
     }
